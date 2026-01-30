@@ -38,7 +38,7 @@ onMounted(() => {
 .flower {
   width: 80px;
   height: 80px;
-  animation: spinFade 2.2ms ease-in-out forwards;
+  animation: spinFade 2.2s ease-in-out forwards;
 }
 
 @keyframes spinFade {

@@ -99,11 +99,7 @@ export default {
 
 h1, h2 {
     color: #9B4A5A;
-    margin-block-end: 0rem;
-    font-family: 'Playfair Display', serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     font-size: 2.6rem;
-    line-height: 1.05;
 }
 
 .lead {

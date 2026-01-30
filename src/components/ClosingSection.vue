@@ -2,12 +2,11 @@
   <section class="closing-veil">
     <div class="veil-overlay">
       <div class="content">
-        <div class="floating-dot"/>
         <p class="closing-text">
-          Todo está en marcha<br/>
-          -- 2026 --<br/>
-            Con mucho cariño, Adrián.
+          Ahora solo queda esperar<br/>
+          Con mucho cariño, Adrián.
         </p>
+
       </div>
     </div>
   </section>
@@ -23,10 +22,12 @@
   height: 100vh;
   width: 100vw;
   background: linear-gradient(
-    180deg,
-    rgba(250, 240, 242, 1) 0%,
-    rgba(245, 230, 235, 1) 100%
-  );
+      180deg,
+      rgba(250, 240, 242, 0.85) 0%,
+      rgba(245, 230, 235, 0.75) 100%
+    );
+  background-size: cover;
+  background-position: center;
   position: relative;
   overflow: hidden;
 }
@@ -34,8 +35,8 @@
 .veil-overlay {
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,35 +50,21 @@
   align-items: center;
 }
 
-.floating-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #b86b7b;
-  opacity: 0.8;
-  animation: breathe 4s ease-in-out infinite;
-}
-
 .closing-text {
   font-family: serif;
   font-size: 1rem;
   color: #7a4a55;
   opacity: 0.85;
+  text-shadow: 0 1px 6px rgba(255,255,255,0.6);
   line-height: 1.6;
 }
 
-@keyframes breathe {
-  0% {
-    transform: scale(1.4);
-    opacity: 0.6;
-  }
-  50% {
-    transform: scale(1.70);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.4);
-    opacity: 0.6;
-  }
+.closing-veil::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/photos/final.png") center / cover no-repeat;
+  opacity: 0.25;
+  mask-image: linear-gradient(to top, transparent 0%, black 50%);
 }
 </style>
