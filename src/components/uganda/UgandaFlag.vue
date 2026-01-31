@@ -34,15 +34,13 @@ onMounted(() => {
   height: 100vh;
   position: absolute;
   overflow: hidden;
-  opacity: 1;
-  transition: opacity 0.8s ease-out;
   z-index: 9999;
   top: 0;
   left: 0;
 }
 
 .flag-container.hide {
-  opacity: 0;
+  pointer-events: none;
 }
 
 .flag {
@@ -63,18 +61,11 @@ onMounted(() => {
   width: 100%;
 }
 
-.stripe.black {
-  background-color: #000000;
+.flag-container.hide .stripe {
+  width: 0;
 }
 
-.stripe.yellow {
-  background-color: #FCDC04;
-}
-
-.stripe.red {
-  background-color: #D90000;
-}
-
+/* Delays para aparecer */
 .stripe-1 {
   transition-delay: 0s;
 }
@@ -97,5 +88,42 @@ onMounted(() => {
 
 .stripe-6 {
   transition-delay: 0.75s;
+}
+
+/* Delays para desaparecer en orden inverso */
+.flag-container.hide .stripe-1 {
+  transition-delay: 0.75s;
+}
+
+.flag-container.hide .stripe-2 {
+  transition-delay: 0.6s;
+}
+
+.flag-container.hide .stripe-3 {
+  transition-delay: 0.45s;
+}
+
+.flag-container.hide .stripe-4 {
+  transition-delay: 0.3s;
+}
+
+.flag-container.hide .stripe-5 {
+  transition-delay: 0.15s;
+}
+
+.flag-container.hide .stripe-6 {
+  transition-delay: 0s;
+}
+
+.stripe.black {
+  background-color: #000000;
+}
+
+.stripe.yellow {
+  background-color: #FCDC04;
+}
+
+.stripe.red {
+  background-color: #D90000;
 }
 </style>

@@ -1,5 +1,7 @@
 <script setup>
-import UgandaFlag from '../components/UgandaFlag.vue'
+import UgandaFlag from '../components/uganda/UgandaFlag.vue'
+import Liana from '../components/uganda/Liana.vue' 
+
 import { onMounted, onUnmounted } from 'vue'
 
 onMounted(() => {
@@ -18,6 +20,8 @@ onUnmounted(() => {
 <template>
   <section class="animal-background">
     <UgandaFlag />
+    <Liana />
+
     <div class="overlay"></div>
     <div class="content">
       <h1>Uganda</h1>
@@ -36,9 +40,6 @@ onUnmounted(() => {
   background-image: url('/photos/uganda/background.png');
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   animation: gradientShift 25s ease infinite;
 }
