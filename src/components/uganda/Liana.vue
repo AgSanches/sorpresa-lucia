@@ -27,12 +27,12 @@
 
 <style scoped>
 .liana-wrapper {
-  position: fixed;
+  position: absolute;
   left: 3px;
   top: 0;
   height: 100vh;
   pointer-events: none;
-  z-index: 0;
+  z-index: 9998;
 }
 
 .liana {
