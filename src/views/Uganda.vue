@@ -3,6 +3,7 @@ import UgandaFlag from '../components/uganda/UgandaFlag.vue'
 import Liana from '../components/uganda/Liana.vue'
 import SafariRoute from '../components/uganda/SafariRoute.vue'
 import OnePageContent from '../components/uganda/UgandaLetter.vue'
+import BonVoyage from '../components/uganda/BonVoyage.vue'
 
 import { onMounted, onUnmounted } from 'vue'
 
@@ -73,6 +74,7 @@ const secondPageImages = [
       <SafariRoute />
     </OnePageContent>
 
+    <BonVoyage />
   </section>
 </template>
 
