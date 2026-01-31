@@ -1,6 +1,7 @@
 <script setup>
 import UgandaFlag from '../components/uganda/UgandaFlag.vue'
-import Liana from '../components/uganda/Liana.vue' 
+import Liana from '../components/uganda/Liana.vue'
+import SafariRoute from '../components/uganda/SafariRoute.vue'
 
 import { onMounted, onUnmounted } from 'vue'
 
@@ -51,6 +52,7 @@ onUnmounted(() => {
     </div>
 
     <div class="one-page-content">
+      <SafariRoute />
       <section class="content">
       <p>
         Disfruta muchísimo de Uganda, Luci. Es un viaje inolvidable.
@@ -120,6 +122,7 @@ onUnmounted(() => {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .content {
