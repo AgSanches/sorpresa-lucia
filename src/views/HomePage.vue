@@ -10,7 +10,7 @@ const baseButtons = [
 ]
 
 const schedule = [
-  { id: 2, label: 'Uganda 🇺🇬',  from: '2026-02-01T00:00:00'},
+  { id: 2, label: 'Uganda 🇺🇬',  from: '2026-02-01T17:00:00'},
   { id: 3, label: 'San Valentín ❤️', from: '2026-02-14T00:00:00'},
   { id: 4, label: 'Ramito 💐',   from: '2026-02-15T00:00:00'},
   { id: 5, label: 'Experiencia 🎉',    from: '2026-02-27T00:00:00'}
@@ -47,8 +47,6 @@ const buttons = computed(() => {
     }
   })
 })
-
-
 </script>
 
 

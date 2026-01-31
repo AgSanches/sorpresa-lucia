@@ -24,7 +24,7 @@ const firstPageSections = [
     title: 'Uganda',
     subtitle: 'Donde la aventura empieza de verdad',
     paragraphs: [
-      'Esta parte no pertenece a la sorpresa, pero como te gustó tanto la primera, he decidido incluirla y así desearte un feliz viaje. También algunas de los fotones que me vayas enviando, los pondré aquí.'
+      'Esta parte no pertenece a la sorpresa, pero como te gustó tanto la primera, he decidido incluirla y así desearte un feliz viaje. También algunoss de los fotones que me vayas enviando, los pondré aquí 📷.'
     ]
   },
   {
@@ -34,7 +34,7 @@ const firstPageSections = [
   },
   {
     paragraphs: [
-      'Espero que te saque una sonrisa ✨'
+      'Espero que te saque una sonrisa esta carta ✨.'
     ]
   }
 ]
@@ -48,7 +48,7 @@ const secondPageSections = [
   {
     paragraphs: [
       'Disfruta muchísimo de Uganda, Luci. Es un viaje inolvidable. Vas a ver un montón de animales increíbles y paisajes preciosos. Ojalá consigas ver montón animales increibles ✨.',
-      'Y encima… ¡ver gorilas de cerca! Eso va a ser una auténtica pasada. Eso sí, más les vale portarse bien 😅 Prefiero no tener que viajar a Uganda a rescatarte y acabar peleandome con alguno de ellos.',
+      'Y encima… ¡ver gorilas de cerca! Eso va a ser una auténtica pasada. Eso sí, más les vale portarse bien. Prefiero no tener que viajar a Uganda a rescatarte y acabar peleandome con alguno de ellos 😡.',
       'Vive cada momento, guarda cada recuerdo. Este viaje se queda contigo para siempre. Y espero escuchar cada una de tus anécdotas a la vuelta. 💕'
     ]
   }
