@@ -32,7 +32,7 @@
   top: 0;
   height: 100vh;
   pointer-events: none;
-  z-index: 9998;
+  z-index: 2;
 }
 
 .liana {
