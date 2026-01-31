@@ -63,7 +63,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/photos/final.png") center / cover no-repeat;
+  background: url("/photos/hello-lu/final.png") center / cover no-repeat;
   opacity: 0.25;
   mask-image: linear-gradient(to top, transparent 0%, black 50%);
 }

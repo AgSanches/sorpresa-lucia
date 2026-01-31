@@ -1,27 +1,87 @@
 <script setup>
-import Section from '../components/Section.vue'
+import UgandaFlag from '../components/UgandaFlag.vue'
+import { onMounted, onUnmounted } from 'vue'
 
-const base = import.meta.env.BASE_URL || '/'
+onMounted(() => {
+  document.body.style.overflow = 'hidden'
+  
+  setTimeout(() => {
+    document.body.style.overflow = 'auto'
+  }, 2800)
+})
+
+onUnmounted(() => {
+  document.body.style.overflow = 'auto'
+})
 </script>
 
 <template>
-  <div class="viewport">
-    <Section
-      title="Página 2"
-      text="Aquí puedes añadir el contenido de tu segunda página."
-      :image="base + 'photos/page1.jpeg'"
-    />
-
-    <!-- Añade más secciones según necesites -->
-  </div>
+  <section class="animal-background">
+    <UgandaFlag />
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Uganda</h1>
+      <p>
+        Ya te vas por fin a Uganda!!!!
+      </p>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.viewport { 
-  height: 100vh; 
-  width: 100vw;
-  overflow-y: auto; 
-  scroll-snap-type: y mandatory; 
-  -webkit-overflow-scrolling: touch; 
+.animal-background {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/photos/uganda/background.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: gradientShift 25s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 25%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 75%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  font-size: 1rem;
 }
 </style>

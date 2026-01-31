@@ -1,12 +1,56 @@
 <script setup>
-const buttons = [
-  { id: 1, label: 'Hola Lu ❤️', route: '/HelloLu', active: true },
-  { id: 2, label: '1 - ?????', route: '/Uganda', active: false },
-  { id: 3, label: '2 - ?????', route: '/page3', active: false },
-  { id: 4, label: '3 - ?????', route: '/page4', active: false },
-  { id: 5, label: '4 - ?????', route: '/page5', active: false }
+import { ref, computed } from 'vue'
+
+const baseButtons = [
+  { id: 1, label: 'Hola Lu ❤️', route: '/HelloLu' },
+  { id: 2, label: '1 - ?????', route: '/Uganda' },
+  { id: 3, label: '2 - ?????', route: '/SanValentin' },
+  { id: 4, label: '3 - ?????', route: '/Ramito' },
+  { id: 5, label: '4 - ?????', route: '/Experiencia' }
 ]
+
+const schedule = [
+  { id: 2, label: 'Uganda 🇺🇬',  from: '2026-02-01T00:00:00'},
+  { id: 3, label: 'San Valentín ❤️', from: '2026-02-14T00:00:00'},
+  { id: 4, label: 'Ramito 💐',   from: '2026-02-15T00:00:00'},
+  { id: 5, label: 'Experiencia 🎉',    from: '2026-02-27T00:00:00'}
+]
+
+function getCanaryDate(date = new Date()) {
+  return new Date(
+    new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Atlantic/Canary',
+      hour12: false,
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    }).format(date)
+  )
+}
+
+const buttons = computed(() => {
+  const now = getCanaryDate().getTime()
+
+  return baseButtons.map(b => {
+    const match = schedule.find(s =>
+      s.id === b.id &&
+      now >= new Date(s.from).getTime()
+    )
+
+    return {
+      ...b,
+      active: !!match || b.id === 1,
+      label: match?.label ?? b.label
+    }
+  })
+})
+
+
 </script>
+
 
 <template>
   <div class="homepage">

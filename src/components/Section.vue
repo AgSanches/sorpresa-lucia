@@ -45,7 +45,7 @@ export default {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    background: linear-gradient(rgba(250, 225, 227, 0.80), rgba(250, 225, 227, 0.80)), url('/photos/background.png');
+    background: linear-gradient(rgba(250, 225, 227, 0.80), rgba(250, 225, 227, 0.80)), url('/photos/hello-lu/background.png');
     background-size: cover;
     padding: 16px;
     position: relative;
