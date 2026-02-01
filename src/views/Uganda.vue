@@ -7,6 +7,8 @@ import BonVoyage from '../components/uganda/BonVoyage.vue'
 
 import { onMounted, onUnmounted } from 'vue'
 
+const base = import.meta.env.BASE_URL || '/'
+
 onMounted(() => {
   document.body.style.overflow = 'hidden'
   
@@ -40,8 +42,8 @@ const firstPageSections = [
 ]
 
 const firstPageImages = [
-  { src: 'photos/uganda/gorila.png', alt: 'Gorila comiendo una planta', class: 'gorilla' },
-  { src: 'photos/uganda/leon.png', alt: 'León comiendo una planta', class: 'leon' }
+  { src: base + 'photos/uganda/gorila.png', alt: 'Gorila comiendo una planta', class: 'gorilla' },
+  { src: base + 'photos/uganda/leon.png', alt: 'León comiendo una planta', class: 'leon' }
 ]
 
 const secondPageSections = [
@@ -55,8 +57,8 @@ const secondPageSections = [
 ]
 
 const secondPageImages = [
-  { src: '/photos/uganda/elefante.png', alt: 'Elefante comiendo una planta', class: 'elefante' },
-  { src: '/photos/uganda/chimpance.png', alt: 'Chimpancé comiendo una planta', class: 'chimpance' }
+  { src: base + 'photos/uganda/elefante.png', alt: 'Elefante comiendo una planta', class: 'elefante' },
+  { src: base + 'photos/uganda/chimpance.png', alt: 'Chimpancé comiendo una planta', class: 'chimpance' }
 ]
 </script>
 

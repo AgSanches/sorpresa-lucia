@@ -20,11 +20,12 @@
 </template>
 
 <script setup>
+const base = import.meta.env.BASE_URL || '/'
+
 const photos = [
-  { src: "/photos/uganda/image1.png", title: "Adri vs Gorila" },
-  { src: "/photos/uganda/image2.jpg", title: "Lucía divina" },
-  { src: "/photos/uganda/image3.jpg", title: "Otro bellezón 🤭" },
-  // añade más aquí
+  { src: base + "photos/uganda/image1.png", title: "Adri vs Gorila" },
+  { src: base + "photos/uganda/image2.jpg", title: "Lucía divina" },
+  { src: base + "photos/uganda/image3.jpg", title: "Otro bellezón 🤭" },
 ];
 </script>
 
@@ -49,7 +50,7 @@ const photos = [
 .zigzag {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 5rem;
 }
 
 .polaroid {
