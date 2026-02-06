@@ -3,14 +3,13 @@ import { ref, computed } from 'vue'
 
 const baseButtons = [
   { id: 1, label: 'Hola Lu ❤️', route: '/HelloLu' },
-  { id: 2, label: '1 - ?????', route: '/Uganda' },
-  { id: 3, label: '2 - ?????', route: '/SanValentin' },
-  { id: 4, label: '3 - ?????', route: '/Ramito' },
-  { id: 5, label: '4 - ?????', route: '/Experiencia' }
+  { id: 2, label: 'Uganda 🇺🇬', route: '/Uganda' },
+  { id: 3, label: '3 - ?????', route: '/SanValentin' },
+  { id: 4, label: '4 - ?????', route: '/Ramito' },
+  { id: 5, label: '5 - ?????', route: '/Experiencia' }
 ]
 
 const schedule = [
-  { id: 2, label: 'Uganda 🇺🇬',  from: '2026-02-01T17:00:00'},
   { id: 3, label: 'San Valentín ❤️', from: '2026-02-14T00:00:00'},
   { id: 4, label: 'Ramito 💐',   from: '2026-02-15T00:00:00'},
   { id: 5, label: 'Experiencia 🎉',    from: '2026-02-27T00:00:00'}
@@ -42,7 +41,7 @@ const buttons = computed(() => {
 
     return {
       ...b,
-      active: !!match || b.id === 1,
+      active: !!match || b.id === 1 || b.id === 2,
       label: match?.label ?? b.label
     }
   })

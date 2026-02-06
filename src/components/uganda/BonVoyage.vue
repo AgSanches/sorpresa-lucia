@@ -23,9 +23,17 @@
 const base = import.meta.env.BASE_URL || '/'
 
 const photos = [
-  { src: base + "photos/uganda/image1.png", title: "Adri vs Gorila" },
   { src: base + "photos/uganda/image2.jpg", title: "Lucía divina" },
   { src: base + "photos/uganda/image3.jpg", title: "Otro bellezón 🤭" },
+  { src: base + "photos/uganda/image4.jpg", title: "Las jirafas!!" },
+  { src: base + "photos/uganda/image5.jpg", title: "Olga posando" },
+  { src: base + "photos/uganda/image6.jpg", title: "La selva" },
+  { src: base + "photos/uganda/image7.jpg", title: "Los gorilas!! 🦍" },
+  { src: base + "photos/uganda/image8.jpg", title: "Ñu herido" },
+  { src: base + "photos/uganda/image9.jpg", title: "Zebrita" },
+  { src: base + "photos/uganda/image10.jpg", title: "Magia de Uganda" },
+  { src: base + "photos/uganda/image11.jpg", title: "Luci con la bebé" },
+  { src: base + "photos/uganda/image12.jpg", title: "Felicidad y belleza pura" },
 ];
 </script>
 
