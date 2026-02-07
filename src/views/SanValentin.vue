@@ -75,7 +75,7 @@ export default {
       localStorage.setItem('sanValentin', 'true')
 
       setTimeout(() => {
-        this.$router.push('/uganda')
+        this.$router.push('/blumen')
       }, 800)
     }
   }
@@ -107,14 +107,6 @@ export default {
 
 @keyframes pinkFade {
   to { background: rgba(255, 182, 193, 0.25); }
-}
-
-.viewport { 
-  height: 100vh; 
-  width: 100vw;
-  overflow-y: auto; 
-  scroll-snap-type: y mandatory; 
-  -webkit-overflow-scrolling: touch;
 }
 
 .actions {

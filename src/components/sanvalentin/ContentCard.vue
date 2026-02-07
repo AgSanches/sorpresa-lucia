@@ -4,15 +4,12 @@
       <p class="eyebrow">{{ eyebrow }}</p>
       <h1 v-if="title">{{ title }}</h1>
       
-      <!-- Si se usa el slot, se renderiza el contenido personalizado -->
       <slot>
-        <!-- Si no hay slot, usa los párrafos por defecto -->
         <p v-for="(paragraph, index) in paragraphs" :key="index" class="text">
           {{ paragraph }}
         </p>
       </slot>
 
-      <!-- Slot adicional al final para botones u otros elementos -->
       <slot name="actions"></slot>
     </div>
   </div>
@@ -40,7 +37,6 @@ export default {
 
 <style scoped>
 .content {
-  scroll-snap-align: start;   
   position: relative;
   z-index: 1;
   height: 100vh;

@@ -33,4 +33,12 @@ p {
     margin-block-end: 0rem;
     font-family: 'Lato', sans-serif;
 }
+
+.viewport { 
+  height: 100vh; 
+  width: 100vw;
+  overflow-y: auto; 
+  scroll-snap-type: y mandatory; 
+  -webkit-overflow-scrolling: touch;
+}
 </style>

@@ -1,5 +1,13 @@
 <template>
   <section class="wrapper">
+    <div v-if="!unlocked" class="password-box">
+      <input
+        v-model="password"
+        placeholder="Lo sabrás pronto…"
+        @keyup.enter="checkPassword"
+      />
+    </div>
+
     <div
       ref="letter"
       class="letter"
@@ -39,26 +47,25 @@
       </svg>
     </div>
 
-
-      <div ref="content" class="content">
-        <h3>Bon Voyage</h3>
-        <p>
-          Este mensaje solo se abrirá cuando tú lo decidas 💛  
-          Y cuando lo haga, ocupará exactamente el espacio que necesite.
-          Este mensaje solo se abrirá cuando tú lo decidas 💛  
-          Y cuando lo haga, ocupará exactamente el espacio que necesite.
-          Este mensaje solo se abrirá cuando tú lo decidas 💛  
-          Y cuando lo haga, ocupará exactamente el espacio que necesite.
-          Este mensaje solo se abrirá cuando tú lo decidas 💛  
-          Y cuando lo haga, ocupará exactamente el espacio que necesite.
-          Este mensaje solo se abrirá cuando tú lo decidas 💛  
-          Y cuando lo haga, ocupará exactamente el espacio que necesite.
-          Este mensaje solo se abrirá cuando tú lo decidas 💛  
-          Y cuando lo haga, ocupará exactamente el espacio que necesite.
-          Este mensaje solo se abrirá cuando tú lo decidas 💛  
-          Y cuando lo haga, ocupará exactamente el espacio que necesite.
-        </p>
-      </div>
+    <div ref="content" class="content">
+      <h3>Bon Voyage</h3>
+      <p>
+        Este mensaje solo se abrirá cuando tú lo decidas 💛  
+        Y cuando lo haga, ocupará exactamente el espacio que necesite.
+        Este mensaje solo se abrirá cuando tú lo decidas 💛  
+        Y cuando lo haga, ocupará exactamente el espacio que necesite.
+        Este mensaje solo se abrirá cuando tú lo decidas 💛  
+        Y cuando lo haga, ocupará exactamente el espacio que necesite.
+        Este mensaje solo se abrirá cuando tú lo decidas 💛  
+        Y cuando lo haga, ocupará exactamente el espacio que necesite.
+        Este mensaje solo se abrirá cuando tú lo decidas 💛  
+        Y cuando lo haga, ocupará exactamente el espacio que necesite.
+        Este mensaje solo se abrirá cuando tú lo decidas 💛  
+        Y cuando lo haga, ocupará exactamente el espacio que necesite.
+        Este mensaje solo se abrirá cuando tú lo decidas 💛  
+        Y cuando lo haga, ocupará exactamente el espacio que necesite.
+      </p>
+    </div>
 
     </div>
   </section>
@@ -69,21 +76,33 @@ export default {
   data() {
     return {
       open: false,
+      unlocked: localStorage.getItem('letterUnlocked') === 'true',
+      password: '',
       currentHeight: 150,
-      closedHeight: 150
+      closedHeight: 150,
+      validPasswords: ['cafe', 'CAFE', 'Café', 'café']
     }
   },
   methods: {
     openLetter() {
-      if (this.open) return
+      if (this.open || !this.unlocked) return
       this.open = true
 
       this.$nextTick(() => {
         requestAnimationFrame(() => {
-          const contentHeight = this.$refs.content.scrollHeight
-          this.currentHeight = contentHeight + 80
+          this.currentHeight = this.$refs.content.scrollHeight + 80
         })
       })
+    },
+    checkPassword() {
+      const value = this.password.trim().toLowerCase()
+      if (this.validPasswords.includes(value)) {
+        this.unlocked = true
+        localStorage.setItem('letterUnlocked', 'true')
+        this.openLetter()
+      } else {
+        this.password = ''
+      }
     }
   }
 }
@@ -92,8 +111,11 @@ export default {
 <style scoped>
 .wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-top: 2rem;
+  gap: 14px;
+  padding-bottom: 2rem;
 }
 
 .letter {
@@ -165,4 +187,41 @@ export default {
 .letter.open .content {
   opacity: 1;
 }
+
+.password-box {
+  padding: 14px 18px;
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.92),
+      rgba(250,245,235,0.9)
+    );
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+
+  backdrop-filter: blur(6px);
+}
+
+.password-box::before {
+  content: "🔐";
+  display: block;
+  text-align: center;
+  margin-bottom: 6px;
+  opacity: .8;
+}
+
+.password-box input {
+  width: 220px;
+  border: none;
+  background: transparent;
+  outline: none;
+  text-align: center;
+  font-style: italic;
+  color: #5b3b2e;
+}
+
 </style>

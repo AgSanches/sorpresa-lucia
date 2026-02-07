@@ -66,11 +66,5 @@ const base = import.meta.env.BASE_URL || '/'
 </template>
 
 <style scoped>
-.viewport { 
-  height: 100vh; 
-  width: 100vw;
-  overflow-y: auto; 
-  scroll-snap-type: y mandatory; 
-  -webkit-overflow-scrolling: touch; 
-}
+
 </style>
