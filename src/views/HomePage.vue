@@ -11,8 +11,8 @@ const baseButtons = [
 
 const schedule = [
   { id: 3, label: 'San Valentín ❤️', from: '2026-02-14T00:00:00'},
-  { id: 4, label: 'Ramito 💐',   from: '2026-02-15T00:00:00'},
-  { id: 5, label: 'Experiencia 🎉',    from: '2026-02-27T00:00:00'}
+  { id: 4, label: 'Cartita 💌', from: '2026-02-15T00:00:00', localStorage: "sanValentin"},
+  { id: 5, label: 'Experiencia 🎉', from: '2026-02-27T00:00:00'}
 ]
 
 function getCanaryDate(date = new Date()) {
@@ -36,7 +36,8 @@ const buttons = computed(() => {
   return baseButtons.map(b => {
     const match = schedule.find(s =>
       s.id === b.id &&
-      now >= new Date(s.from).getTime()
+      (now >= new Date(s.from).getTime() 
+      || (s.localStorage && localStorage.getItem(s.localStorage)))
     )
 
     return {
