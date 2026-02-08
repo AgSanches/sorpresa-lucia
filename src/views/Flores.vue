@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import Letter from '../components/sanvalentin/Letter.vue';
+import Letter from '../components/flores/Letter.vue';
 import FloresCard from '../components/flores/FloresCard.vue';
 
 export default {

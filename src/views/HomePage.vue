@@ -52,7 +52,7 @@ const buttons = computed(() => {
 
 <template>
   <div class="homepage">
-    <div class="overlay" />
+    <div class="overlay"/>
 
     <div class="content">
       <div class="welcome-text">

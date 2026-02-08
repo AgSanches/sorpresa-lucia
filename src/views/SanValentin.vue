@@ -36,14 +36,14 @@
     title="¿Quieres ser mi San Valentín?"
     :class="{ exit: leaving }"
     >
-    <div class="actions">
-        <button class="btn primary" @click="accept">💕 Sí, claro</button>
-        <button class="btn secondary" @click="accept">🤭 Obvio que sí</button>
-    </div>
+        <div class="actions">
+            <button class="btn primary" @click="accept">💕 Sí, claro</button>
+            <button class="btn secondary" @click="accept">🤭 Obvio que sí</button>
+        </div>
 
-    <p class="hint">
-        Creías que te iba a dejar decir que no 🙂‍↔️
-    </p>
+        <p class="hint">
+            Creías que te iba a dejar decir que no 🙂‍↔️
+        </p>
     </ContentCard>
 
     <div class="hearts" v-if="showHearts">
@@ -75,7 +75,7 @@ export default {
       localStorage.setItem('sanValentin', 'true')
 
       setTimeout(() => {
-        this.$router.push('/blumen')
+        this.$router.push('/ramito')
       }, 800)
     }
   }

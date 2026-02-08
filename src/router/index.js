@@ -27,7 +27,7 @@ const routes = [
     component: SanValentin
   },
   {
-    path: '/Blumen',
+    path: '/Ramito',
     name: 'Flores',
     component: Flores
   }
