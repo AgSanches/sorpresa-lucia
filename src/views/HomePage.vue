@@ -5,47 +5,10 @@ const baseButtons = [
   { id: 1, label: 'Hola Lu ❤️', route: '/HelloLu' },
   { id: 2, label: 'Uganda 🇺🇬', route: '/Uganda' },
   { id: 3, label: 'San Valentín ❤️', route: '/SanValentin' },
-  { id: 4, label: '4 - ?????', route: '/Ramito' },
-  { id: 5, label: '5 - ?????', route: '/Experiencia' }
+  { id: 4, label: 'Cartita 💌', route: '/Ramito' },
+  { id: 5, label: 'Experiencia 🎉', route: '/Experiencia' }
 ]
 
-const schedule = [
-  { id: 4, label: 'Cartita 💌', from: '2026-02-15T00:00:00', localStorage: "sanValentin"},
-  { id: 5, label: 'Experiencia 🎉', from: '2026-02-27T00:00:00'}
-]
-
-function getCanaryDate(date = new Date()) {
-  return new Date(
-    new Intl.DateTimeFormat('en-CA', {
-      timeZone: 'Atlantic/Canary',
-      hour12: false,
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit'
-    }).format(date)
-  )
-}
-
-const buttons = computed(() => {
-  const now = getCanaryDate().getTime()
-
-  return baseButtons.map(b => {
-    const match = schedule.find(s =>
-      s.id === b.id &&
-      (now >= new Date(s.from).getTime() 
-      || (s.localStorage && localStorage.getItem(s.localStorage)))
-    )
-
-    return {
-      ...b,
-      active: !!match || b.id === 1 || b.id === 2 || b.id === 3,
-      label: match?.label ?? b.label
-    }
-  })
-})
 </script>
 
 
@@ -63,21 +26,13 @@ const buttons = computed(() => {
         </p>
       </div>
 
-      <template v-for="button in buttons" :key="button.id">
+      <template v-for="button in baseButtons" :key="button.id">
         <router-link
-          v-if="button.active"
           :to="button.route"
           class="sunset-btn"
         >
           {{ button.label }}
         </router-link>
-
-        <span
-          v-else
-          class="sunset-btn inactive"
-        >
-          {{ button.label }}
-        </span>
       </template>
     </div>
   </div>

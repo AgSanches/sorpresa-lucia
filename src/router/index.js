@@ -4,6 +4,7 @@ import HelloLu from '../views/HelloLu.vue'
 import Uganda from '../views/Uganda.vue'
 import SanValentin from '../views/SanValentin.vue'
 import Flores from '../views/Flores.vue'
+import Experiencia from '../views/Experiencia.vue'
 
 const routes = [
 {
@@ -30,6 +31,11 @@ const routes = [
     path: '/Ramito',
     name: 'Flores',
     component: Flores
+  },
+  {
+    path: '/Experiencia',
+    name: 'Experiencia',
+    component: Experiencia
   }
 ]
 
