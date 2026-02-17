@@ -1,3 +1,23 @@
+<script>
+import ExperienceContent from '@/components/experiencia/ExperienceContent.vue';
+import ExperiencieText from '@/components/experiencia/ExperiencieText.vue';
+
+const base = import.meta.env.BASE_URL || '/'
+
+export default {
+    name: 'Experiencia',
+    components: {
+        ExperienceContent,
+        ExperiencieText
+    },
+    data() {
+        return {
+            base
+        }
+    }
+}
+</script>
+
 <template>
     <div class="viewport">
         <div class="experiencia-bg"></div>
@@ -51,21 +71,98 @@
                 'A continuación vas a ver una serie de cajas que son las distintas opciones que puedes elegir, creo que te puedes imaginar lo que hay dentro de cada una de ellas. Aunque realmente creo que se cual vas a escoger... 😳'
             ]"
         ></ExperiencieText>
+
+        <ExperienceContent
+            title="Hotel Princess 🌴"
+            :text="[
+                'Como primera opción, te propongo uno de tus hoteles favoritos. El Hotel Princess.',
+                'Todo un finde semana con todo incluido 🤭.'
+            ]"
+            :imageSrc="base + 'photos/experiencia/princess.webp'"
+        ></ExperienceContent>
+
+        <ExperienceContent
+            title="Canarias 🌊"
+            :text="[
+                'Como segunda opción, ya empezamos a coger aviones, y que mejor que las islas que te faltan, además de Lanzarote.',
+                'En esta opción, te propongo un finde semana ya sea en El Hierro, La Gomera o Lanzarote.',
+                'En este caso, te incluyo el vuelo, el hotel y el coche de alquiler.'
+            ]"
+            :imageSrc="base + 'photos/experiencia/canarias.png'"
+        ></ExperienceContent>
+
+        <ExperiencieText
+            title="¿Qué te ha parecido? 🤭"
+            :text="[
+                'Aunque creas que eso es todo, ahora vienen las opciones premium. Fíjate en el fondo de pantalla de la web.',
+                'Es importante comentar que las opciones a partir de ahora no podré al 100%, pero intentaré cubrir lo máximo posible.'
+            ]"
+        ></ExperiencieText>
+
+        <ExperienceContent
+            title="Roma ⛪️"
+            :text="[
+                'Me has hablado varias veces de Italia, asi que mejor que ir a Roma?',
+                'En esta opción, te propongo una escapada. Habría que mirar cuantos días. Algo que doy por seguro, es que te invitaré a una buena cena y un gelato en el centro de Roma.'
+            ]"
+            :imageSrc="base + 'photos/experiencia/roma.png'"
+        ></ExperienceContent>
+
+        <ExperienceContent
+            title="Florencia 🎨"
+            :text="[
+                'Seguimos en Italia, pero esta vez Florencia.',
+                'Se dice que es de las ciudades mas bonitas de Italia, y que mejor que llevar al mayor bellezón de todos 🤭',
+                'Aquí te llevaré a ver el atardecer desde el Piazzale Michelangelo, a visitar la Galería Uffizi, a ver el David de Miguel Ángel y a pasear por el centro de Florencia.'
+            ]"
+            :imageSrc="base + 'photos/experiencia/florencia.png'"
+        ></ExperienceContent>
+
+        <ExperiencieText
+            title="¿Crees que es todo? 🙈"
+            :text="[
+                'Pues no Lucía, aunque son opciones increibles tengo mas opciones en mente. Son experiencias más locas.',
+                'Aún asi te las propongo, a ver que te parecen 👀.'
+            ]"
+        ></ExperiencieText>
+
+        <ExperienceContent
+            title="La Toscana 🌻"
+            :text="[
+                'Ahora empieza una ruta por la Toscana, aquí también visitaremos Florencia que está incluida en esta ruta.',
+                'A parte de ello, habrá montón de pueblos y ciudades mas que visitar. Además de que esta ruta es famosa por unos paisajes preciosos.',
+                'Y no solo eso... como bien pensaste en lo que te gusta beber, también podremos visitar alguna bodega y que pruebes sus vinos.'
+            ]"
+            :imageSrc="base + 'photos/experiencia/toscana.png'"
+        ></ExperienceContent>
+
+        <ExperienceContent
+            title="Dolomitas 🏔"
+            :text="[
+                '¿Cuál sino para acabar?',
+                'Uno de tus viajes mas deseados, ir a las Dolomitas. No te voy a negar que hace un par de años también lo tuve en mente, pero no se ha dado.',
+                'Por ello también te lo propongo, a diferencia del resto de opciones, esta es mas aventura que cualquiera de ellas.'
+            ]"
+            :imageSrc="base + 'photos/experiencia/dolomitas.png'"
+        ></ExperienceContent>
+
+        <ExperiencieText
+            title="Hasta aquí has llegado"
+            :text="[
+                'Ahora solo te queda elegir una de las opciones, aunque creo que se cual tienes en mente principalmente... 😳',
+                'Aún asi, estoy abierto a otras opciones, se cuales son las otras opciones que te gustaría llevar a cabo, así que si quieres otra experiencia, solo tienes que decírmelo y lo organizamos.'
+            ]"
+        ></ExperiencieText>
+
+        <ExperiencieText
+            title="Ahora toca disfrutarlo"
+            :text="[
+                'También es importante Lucía, se que no tengo que hacer nada de esto por ti, pero quiero hacerlo, no me preguntes el motivo, simplemente quiero hacerlo, y quiero disfrutarlo contigo.',
+                'Y con esto acaba tu mes, espero que lo hayas disfrutado y te haya gustado cada parte. Me ha hecho mucha ilusión haberlo preparado para ti.'
+            ]"
+        ></ExperiencieText>
     </div>
 </template>
-
-<script>
-import ExperienceContent from '@/components/experiencia/ExperienceContent.vue';
-import ExperiencieText from '@/components/experiencia/ExperiencieText.vue';
-
-export default {
-    name: 'Experiencia',
-    components: {
-        ExperienceContent,
-        ExperiencieText
-    }
-}
-</script>
 
 <style scoped>
 

@@ -58,10 +58,6 @@ export default {
   }
 }
 
-.section {
-  position: relative;
-}
-
 .section::before {
   content: "❦";
   position: absolute;
