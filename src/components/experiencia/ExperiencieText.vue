@@ -213,7 +213,7 @@ p + p {
 @media (max-width: 768px) {
   .card {
     padding: 2.5rem 1.8rem;
-    max-width: 95%;
+    max-width: 75%;
   }
   
   .card::after {

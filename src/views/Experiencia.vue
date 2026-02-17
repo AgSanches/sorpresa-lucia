@@ -25,14 +25,14 @@
         ></ExperiencieText>
 
         <ExperiencieText
-            title="Toda esta sorpresa 💕"
+            title="Ay Luci 💕"
             :text="[
                 'Ya has podido ver como te la he liado con esta sorpresa, te he escrito cartas, te he hecho esperar para que vieras los distintos apartados de la web, encima con contraseñas algunas de ellas. Para colmo te la he liado enviandote un ramito de flores a casa y encima para rematar, ahora viene posiblemente lo peor. La experiencia.'            
             ]"
         ></ExperiencieText>
 
         <ExperiencieText
-            title="Un regalo especial 🎁"
+            title="Para los dos 🎁"
             :text="[
                 'No se si te acordarás, pero cuando te dí los regalos de reyes, te dije que el próximo regalo que te daría no sería material y por ello quiero cumplir mi palabra.'
             ]"
