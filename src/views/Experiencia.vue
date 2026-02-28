@@ -94,7 +94,7 @@ export default {
         <ExperiencieText
             title="¿Qué te ha parecido? 🤭"
             :text="[
-                'Aunque creas que eso es todo, ahora vienen las opciones premium. Fíjate en el fondo de pantalla de la web.',
+                'Aunque creas que eso es todo, ahora vienen las opciones premium.',
                 'Es importante comentar que las opciones a partir de ahora no podré al 100%, pero intentaré cubrir lo máximo posible.'
             ]"
         ></ExperiencieText>

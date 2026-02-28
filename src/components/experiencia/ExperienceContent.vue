@@ -1,11 +1,5 @@
 <template>
   <section class="hero">
-    <div class="lock-overlay">
-        <div class="lock-content">
-            <div class="lock-icon">🔒</div>
-            <p class="lock-text">Tienes que esperar un poco más... 🤭</p>
-        </div>
-    </div>
 
     <div
       class="hero-image"
